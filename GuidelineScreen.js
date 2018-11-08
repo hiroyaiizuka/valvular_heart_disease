@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
-import {Dimensions, StyleSheet,Text,View,ScrollView,Button, TouchableOpacity, Linking} from 'react-native';
-import {Table, TableWrapper, Row, Rows, } from 'react-native-table-component';
+import {Text,View,ScrollView,Linking} from 'react-native';
 import { List, ListItem } from 'react-native-elements'
 
 
 const list = [
     {
-      name: '弁膜疾患の非薬物療法に関するガイドライン',
-      subtitle: '2012年 日本循環器学会'
+        name: '循環器超音波検査の適応と判読ガイドライン',
+        subtitle: '2010年 日本循環器学会'
 
     },
     {
-        name: '循環器超音波検査の適応と判読ガイドライン',
-        subtitle: '2010年 日本循環器学会'
+        name: '弁膜疾患の非薬物療法に関するガイドライン',
+        subtitle: '2012年 日本循環器学会'
+      
+    },
+    {
+        name: '先天性心疾患、心臓大血管の構造的疾患に対するカテーテル治療のガイドライン',
+        subtitle: '2014年 日本循環器学会'   
     },
 ]
 
@@ -37,12 +41,15 @@ class GuidelineScreen extends React.Component{
 
     
     onPress1(name){
-        if (name === '弁膜疾患の非薬物療法に関するガイドライン'){
-            Linking.openURL('http://www.j-circ.or.jp/guideline/pdf/JCS2012_ookita_h.pdf')
-        
-        } else {
+        if (name === '循環器超音波検査の適応と判読ガイドライン'){
             Linking.openURL('http://www.j-circ.or.jp/guideline/pdf/JCS2010yoshida.h.pdf')
-        }       
+        
+        }else if (name === '弁膜疾患の非薬物療法に関するガイドライン'){
+            Linking.openURL('http://www.j-circ.or.jp/guideline/pdf/JCS2012_ookita_h.pdf')
+
+        } else {
+            Linking.openURL('http://www.j-circ.or.jp/guideline/pdf/JCS2014_nakanishi_h.pdf')
+        }
     }
 
     onPress2(name){
@@ -61,7 +68,7 @@ class GuidelineScreen extends React.Component{
         const state = this.state;
 
         return(
-          <ScrollView style={styles.container}>
+          <ScrollView >
            <Text style={{fontSize: 25 ,padding: 20}} >国内</Text>
             <List>
                 {list.map((item) => (
@@ -97,11 +104,5 @@ class GuidelineScreen extends React.Component{
       
     }
 }
-
-     
-const styles = StyleSheet.create({
-   
-  });
-
 
 export default GuidelineScreen;

@@ -21,7 +21,7 @@ class HomeScreen extends React.Component{
                     </TouchableOpacity>
             
                     <TouchableOpacity style = {{paddingBottom: 25}} onPress = {() =>{ this.props.navigation.navigate('SevereN')}}>
-                        <Text style={{color: 'rgb(52,62,62)', textAlign: 'center'}}>大動脈弁閉鎖不全症{"\n"}   (Aortic regurgitation; AR)</Text>
+                        <Text style={{color: 'rgb(52,62,62)', textAlign: 'center'}}>大動脈弁閉鎖不全症{"\n"}   (Aortic Regurgitation; AR)</Text>
                     </TouchableOpacity>
 
 

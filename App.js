@@ -6,16 +6,20 @@ import HomeScreen from './HomeScreen';
 import EchoScreen from './EchoScreen';
 import GuidelineScreen from './GuidelineScreen';
 import Severe1Screen from './as/Severe1Screen';
+import AstreatScreen from './as/AstreatScreen';
 
 
 
 
 const App = createStackNavigator({
+  Astreat:        {screen: AstreatScreen},
   Home:           {screen: HomeScreen}, 
   Echo:           {screen: EchoScreen},
   Guideline:      {screen: GuidelineScreen},
   Severe1:        {screen: Severe1Screen},
-  
+
+
+
 }, {
     navigationOptions: {
       title: '弁膜症 アプリ',

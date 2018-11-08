@@ -6,18 +6,12 @@ import { CheckBox } from 'react-native-elements';
 
 class EchoScreen extends React.Component{
     state ={
-          sex: '',
-          age: '',
-          weight: '',
-          cr: '',
-          ccr: '',
-          checked: false,
-          checked1: false,
+        
     }   
 
     static navigationOptions = ()=>{
       return { 
-        title: 'CCr計算',
+        title: '心エコー所見',
         headerStyle: { backgroundColor : '#265366'},
         headerTintColor: "#fff",
         headerBackTitle: null,
