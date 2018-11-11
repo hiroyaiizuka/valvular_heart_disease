@@ -3,18 +3,20 @@ import { StyleSheet, Dimensions, TouchableOpacity, Text, Image, View, ScrollView
 import { ButtonGroup, Card, Icon } from 'react-native-elements';
 
 
-class AstreatScreen extends React.Component{
+class ArtreatScreen extends React.Component{
     state = {    
         display: "none",
         display2: "none",
         display3: "none",
         display4: "none",
         display5: "none",
+        displayope: "none",
+        displayope2: "none",
         disabled: true,     
         textdisplay0: "none",    
-        textdisplay: "none",
         textdisplay2: "none",
         textdisplay3: "none",
+        textdisplay4: "none",
         carddisplay: "none",
         carddisplay2: "none",
         carddisplay3: "none",
@@ -22,7 +24,8 @@ class AstreatScreen extends React.Component{
         index1: 3,  
         index2: 3,  
         index3: 3,
-
+        index4: 3,
+        index5: 3,
         modalVisible: false,
         modalVisible2: false,
         modalVisible3: false,
@@ -39,19 +42,21 @@ class AstreatScreen extends React.Component{
 
 
       pressHere(index){
-        this.scroller.scrollTo({x: 0, y: 169 })
+        this.scroller.scrollTo({x: 0, y: 320 })
         if (index ===0){
         this.setState({
                 display: "flex",
                 display2: "none",
                 display3: "none",
                 display4: "none",
+                displayope: "none",
+                displayope2: "none",
                 color: "white",
                 index: index,
                 textdisplay0: "none",
-                textdisplay: "none",
                 textdisplay2: "none",
                 textdisplay3: "none",
+                textdisplay4: 'none',
                 carddisplay: "none",
                 carddisplay2: "none",
                 carddisplay3: "none",
@@ -61,12 +66,13 @@ class AstreatScreen extends React.Component{
              });
         }else{
             this.setState({
-                display: "flex",
+                display: "none",
                 display2: "none",
                 display3: "none",
                 display4: "none",
+                displayope: "flex",
+                displayope2: "none",
                 textdisplay0: "none",
-                textdisplay: "none",
                 textdisplay2: "none",
                 textdisplay3: "none",
                 textdisplay4: "none",
@@ -75,98 +81,73 @@ class AstreatScreen extends React.Component{
                 carddisplay3: "none",
                 color: "white",
                 index: index,
-                index1: 2
+                index1: 2,
+                index4: 3
              });
         }
       }
   
       pressHere2(index1){
-        this.scroller.scrollTo({x: 0, y: 320 })
+        this.scroller.scrollTo({x: 0, y: 440 })
             if ( this.state.index === 0 && index1 === 0){
                 this.setState({
-                    textdisplay0: "none",
-                    textdisplay: "flex",
+                    textdisplay0: "flex",
                     color: "white",
                     index1: index1,
-                    index2: 3,
+                    index2: 4,
+                    index5: 2,
                     textdisplay2: "none",
                     textdisplay3: "none",
+                    textdisplay4: 'none',
                     display3: "none",
+                    displayope2: "none",
                     carddisplay: "none",
                     carddisplay2: "none",
                     carddisplay3: "none",
                 });
-            }else if(this.state.index === 1 && index1 === 0){
-                this.setState({
-                    textdisplay0: "none",
-                    textdisplay: "none",
-                    textdisplay2: "none",
-                    textdisplay3: "none",
-    
-                    carddisplay: "none",
-                    carddisplay2: "none",
-                    carddisplay3: "none",
-                    color: "white",
-                    index1: index1,
-                    index3: 3,
-                    display4: "flex",
-                });
-            }else if(this.state.index === 1 && index1 === 1){
-                this.setState({
-                    textdisplay0: "none",
-                    textdisplay: "none",
-                    textdisplay2: "flex",
-                    textdisplay3: "none",
-                    carddisplay: "none",
-                    carddisplay2: "none",
-                    carddisplay3: "flex",
-                    color: "white",
-                    index1: index1,
-                    display4: "none",
-                });
+            
             }else{
                 this.setState({
-                    display3: "flex",
+                    displayope2: "flex",
                     textdisplay0: "none",
-                    textdisplay: "none",
+                    textdisplay4: 'none',
                     carddisplay: "none",
                     carddisplay2: "none",
                     carddisplay3: "none",
                     color: "white",
-                    index1: index1
+                    index1: index1,
+                    index5: 2
+                    
             });
             }
          }
 
       pressHere3(index2){
-            this.scroller.scrollTo({x: 0, y: 360 })
+            this.scroller.scrollTo({x: 0, y: 690 })
                 if (this.state.index1 === 1 && index2 === 0){
                     this.setState({
-                        textdisplay0: "flex", 
-                        textdisplay: "none",
-                        textdisplay2: "none",
+                        textdisplay2: "flex",
                         textdisplay3: "none",
+                        textdisplay4: "none",
                         color: "white",
                         index2: index2
                     });
                 }else if(this.state.index1 === 1 && index2 === 1){
                     this.setState({
-                        textdisplay0: "none",
-                        textdisplay: "none",
-                        textdisplay2: "flex",
-                        textdisplay3: "none",
+                        textdisplay2: "none",
+                        textdisplay3: "flex",
+                        textdisplay4: "none",
                         carddisplay: "none",
                         carddisplay2: "none",
                         carddisplay3: "none",
                         color: "white",
                         index2: index2
                      });
-                }else if (this.state.index1 ===1){
+                }else if(this.state.index1 === 1 && index2 === 2){
                     this.setState({
-                        textdisplay0: "none",
-                        textdisplay: "none",
                         textdisplay2: "none",
-                        textdisplay3: "flex",
+                        textdisplay3: "none",
+                        textdisplay4: "flex",
                         carddisplay: "none",
                         carddisplay2: "none",
                         carddisplay3: "none",
@@ -181,7 +162,6 @@ class AstreatScreen extends React.Component{
             if (index3 === 0){
                 this.setState({
                     textdisplay0: "none",
-                    textdisplay: "none",
                     textdisplay2: "flex",
                     textdisplay3: "none",
                     carddisplay: "none",
@@ -193,7 +173,6 @@ class AstreatScreen extends React.Component{
             }else{
                 this.setState({
                     textdisplay0: "none",
-                    textdisplay: "none",
                     textdisplay2: "flex",
                     textdisplay3: "none",
                     carddisplay: "flex",
@@ -204,6 +183,50 @@ class AstreatScreen extends React.Component{
                  });
             
             }        
+      }
+
+      pressHere5(index4){
+        this.scroller.scrollTo({x: 0, y: 490 })
+        if (index4 === 0 ){
+            this.setState({
+                textdisplay2: 'flex',
+                textdisplay4: 'none',
+                index4: index4
+            });
+        }else {
+            this.setState({
+                textdisplay2: 'none',
+                textdisplay4: 'flex',
+                index4: index4
+
+            });
+        }
+      }
+
+      pressHere6(index5){
+        this.scroller.scrollTo({x: 0, y: 670 })
+        if (index5 === 0 ){
+            this.setState({
+                textdisplay0: 'flex',
+                textdisplay2: 'none',
+                textdisplay3: 'none',
+                textdisplay4: 'none',
+                display3: 'none',
+                index5: index5,
+                index2: 3
+            });
+        }else {
+            this.setState({
+                textdisplay0: 'none',
+                textdisplay2: 'none',
+                textdisplay3: 'none',
+                textdisplay4: 'none',
+                display3: 'flex',
+                index5: index5,
+                index2: 3
+
+            });
+        }
       }
 
       openModal(){
@@ -240,8 +263,8 @@ class AstreatScreen extends React.Component{
     render(){
         let screenWidth = Dimensions.get('window').width;
         let screenHeight = Dimensions.get('window').height;
-        const {index, index1, index2, index3, textdisplay0, display, display2, display3, display4, display5, modalVisible, modalVisible2, modalVisible3,
-            carddisplay, carddisplay2, carddisplay3, textdisplay, textdisplay2, textdisplay3, textdisplay4} = this.state;
+        const {index, index1, index2, index3, index4, index5, textdisplay0, display, display2, display3, display4, display5, displayope, displayope2, modalVisible, modalVisible2, modalVisible3,
+            carddisplay, carddisplay2, carddisplay3, textdisplay2, textdisplay3, textdisplay4} = this.state;
         return(
             <ScrollView  style = {{paddingTop: 100,  backgroundColor: 'rgb(233,231,217)'}} 
                     ref = {(scroller) => {this.scroller = scroller}}>
@@ -259,11 +282,11 @@ class AstreatScreen extends React.Component{
                             onrequestClose = {()=>this.closeModal()}
                             transparent = {true}
                            >
-                            <View style ={{flex: 1, backgroundColor:'rgb(233,231,217)', height: 730}}>
-                                <Image  style={{width: 325, height: 490, alignSelf: 'center', marginTop: 100}} source={require('../assets/chartasnew.png')} />
-                                <Text style = {{fontSize: 7, marginTop: 40, textAlign: 'center'}}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease</Text>
+                            <View style ={{backgroundColor:'rgb(233,231,217)', height: 730}}>
+                                <Image  style={{width: 335, height: 590, alignSelf: 'center', marginTop: 60}} source={require('../assets/archart.png')} />
+                                <Text style = {{fontSize: 7, marginTop: 15, textAlign: 'center'}}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease</Text>
             
-                            <TouchableOpacity style = {[{marginTop: 40,backgroundColor: 'rgb(130,200,143)',alignSelf: 'center', width: 80}, styles.button]}
+                            <TouchableOpacity style = {[{marginTop: 15,backgroundColor: 'rgb(130,200,143)',alignSelf: 'center', width: 80}, styles.button]}
                                         onPress ={()=> this.closeModal()} >
                                 <View>
                                     <Text style = {{color: 'white', fontSize: 12, padding:5, alignSelf: 'center'}}>閉じる</Text>
@@ -283,11 +306,11 @@ class AstreatScreen extends React.Component{
                     <ButtonGroup
                         selectedButtonStyle={{ backgroundColor : 'rgb(24,77,116)'}} 
                         onPress={(index)=> this.pressHere(index)}
-                        textStyle = {{fontSize: 14, lineHeight: 18}}
+                        textStyle = {{fontSize: 12, lineHeight: 15 }}
                         selectedIndex={index}
                         selectedTextStyle= {{color: 'white'}}
-                        buttons={['Vmax > 4m/s', '      Vmax   3-3.9   m/s \n ΔP mean  20-39 mmHg']}
-                        containerStyle={{height: 65}}
+                        buttons={['vena contracta 幅 > 0.6cm \n\n逆流量 ≧ 60ml/beat \n逆流率 ≧ 60% \n有効逆流弁口面積 ≧ 0.3cm2\n\n下行大動脈の汎拡張期逆流\n左室拡大', 'vena contracta 幅 < 0.6cm \n\n逆流量 < 60ml/beat \n逆流率 < 60% \n有効逆流弁口面積 < 0.3cm2\n\n\n']}
+                        containerStyle={{height: 160,}}
                         />
 
                     <ButtonGroup
@@ -310,15 +333,53 @@ class AstreatScreen extends React.Component{
                         containerStyle={{height: 50, marginTop: 80, display: display4}} 
                         />
 
+                   
+
+                    <View style = {{display: displayope, marginTop: 80}}>
+                        <Text style = {{textAlign: 'center', color: 'rgb(24,77,116)', fontSize: 16, fontWeight: 'bold'}}>他の心臓手術の予定あり? </Text>
+                    </View>
+
+                    <ButtonGroup
+                        selectedButtonStyle={{backgroundColor: 'rgb(24,77,116)'}} 
+                        onPress={(index4)=> this.pressHere5(index4)}
+                        textStyle = {{fontSize: 16,lineHeight: 15 }}
+                        selectedIndex={index4}
+                        selectedTextStyle= {{color: 'white'}}　
+                        buttons={['Yes', 'No',]}
+                        containerStyle={{height: 50, marginTop: 40, display: displayope}} 
+                        />
+
+                    
+                    <View style = {{display: displayope2, marginTop: 80}}>
+                        <Text style = {{textAlign: 'center', color: 'rgb(24,77,116)', fontSize: 16, fontWeight: 'bold', lineHeight: 20}}>EF ＜ 50% {"\n"} or {"\n"}他の心臓手術の予定あり? </Text>
+                    </View>
+
+                     <ButtonGroup
+                        selectedButtonStyle={{backgroundColor: 'rgb(24,77,116)'}} 
+                        onPress={(index5)=> this.pressHere6(index5)}
+                        textStyle = {{fontSize: 16,lineHeight: 15 }}
+                        selectedIndex={index5}
+                        selectedTextStyle= {{color: 'white'}}　
+                        buttons={['Yes', 'No',]}
+                        containerStyle={{height: 50, marginTop: 40, display: displayope2}} 
+                        />
+                    
+
+
+                    <View style = {{display: display3, marginTop: 80}}>
+                        <Text style = {{textAlign: 'center', color: 'rgb(24,77,116)', fontSize: 16, fontWeight: 'bold', lineHeight: 20}}>EF > 50% {"\n"}{"\n"}Dd, Dsのサイズは？ </Text>
+                    </View>
                     <ButtonGroup
                         selectedButtonStyle={{backgroundColor: 'rgb(24,77,116)'}} 
                         onPress={(index2)=> this.pressHere3(index2)}
-                        textStyle = {{fontSize: 11, lineHeight: 15}}
+                        textStyle = {{fontSize: 11,lineHeight: 15 }}
                         selectedIndex={index2}
                         selectedTextStyle= {{color: 'white'}}　
-                        buttons={['    EF<50%\n        or    \n 他の心臓手術', '     Vmax > 5m/s\nΔPmean > 60mmHg\n　　手術リスク低\n　運動負荷試験で異常', ' ΔVmax > 0.3m/s/y\n\n     手術リスク低']}
-                        containerStyle={{height: 80, marginTop: 80, display: display3}} 
+                        buttons={['Ds > 50mm', 'Dd > 65mm\n手術リスク 低', 'Ds ≦ 50mm\nDd ≦ 65mm ']}
+                        containerStyle={{height: 50, marginTop: 40, display: display3}} 
                         />
+
+
 
                     
                     <Card title = '下記3条件を満たす場合' containerStyle={{display: carddisplay, marginTop: 80, marginBottom: 20}}>
@@ -350,42 +411,29 @@ class AstreatScreen extends React.Component{
             
 
                        
-                    <View style = {[{display: textdisplay, alignSelf: 'center',  backgroundColor: 'rgb(197,65,43)',  height: 50, width:'60%', marginTop: 60}, styles.button ]}>                  
-                        <TouchableOpacity  onPress ={()=> this.openModal2()} >
-                            <Text style = {styles.textstyle}>AVR  class 1 </Text>
-                            <Icon 
-                                name='touch-app' 
-                                color= 'white'
-                                containerStyle = {{ position:'relative', top: -30, left: 70 }}/>
-                        </TouchableOpacity>
-                    </View>
+        
                     <View style = {[{display: textdisplay0, alignSelf: 'center',  backgroundColor: 'rgb(197,65,43)',  height: 50, width:'60%', marginTop: 60}, styles.button ]}>                  
                             <Text style = {styles.textstyle}>AVR  class 1 </Text>
                     </View>
-                    <TouchableOpacity onPress = {()=>this.openModal3()}>
-                        <View style = {[{display: textdisplay0, width:'60%', alignSelf: 'center', backgroundColor: 'rgb(130,200,143)', marginTop: 10}, styles.button]}>
-                            <Text style = {styles.textstyle}>上記に当てはまらない場合 </Text>
-                        </View>
-                    </TouchableOpacity>
-
+                  
                     <View style = {[{display: textdisplay2, alignSelf: 'center', backgroundColor: 'rgb(50,185,236)',  height: 50, width:'60%', marginTop: 60}, styles.button]}>
                         <Text style = {styles.textstyle}>AVR class 2a </Text>
                     </View>
-                    <TouchableOpacity onPress = {()=>this.openModal3()}>
-                        <View style = {[{display: textdisplay2, width:'60%', alignSelf: 'center', backgroundColor: 'rgb(130,200,143)', marginTop: 10}, styles.button]}>
-                            <Text style = {styles.textstyle}>上記に当てはまらない場合 </Text>
-                        </View>
-                    </TouchableOpacity>
-
                         
                     <View style = {[{display: textdisplay3, alignSelf: 'center', backgroundColor: 'rgb(233,152,85)',  height: 50, width:'60%', marginTop: 60}, styles.button]}>
                         <Text style = {styles.textstyle}>AVR class 2b </Text>
                     </View>  
-                    <TouchableOpacity onPress = {()=>this.openModal3()}>
-                        <View style = {[{display: textdisplay3, width:'60%', alignSelf: 'center', backgroundColor: 'rgb(130,200,143)', marginTop: 10}, styles.button]}>
-                            <Text style = {styles.textstyle}>上記に当てはまらない場合 </Text>
-                        </View>
-                    </TouchableOpacity>
+                   
+                    <View style = {[{display: textdisplay4, marginTop: 60, width:'60%', height: 50, alignSelf: 'center', backgroundColor: 'rgb(130,200,143)'}, styles.button]}>
+                        <TouchableOpacity onPress = {()=>this.openModal3()}>
+                            <Text style = {styles.textstyle}>定期フォロー </Text>
+                            <Icon 
+                                name='touch-app' 
+                                color= 'white'
+                                containerStyle = {{ position:'relative', top: -30, left: 70 }}/>       
+                        </TouchableOpacity>
+                    </View>
+                    
                     
 
                               
@@ -394,7 +442,7 @@ class AstreatScreen extends React.Component{
                         animationTipe = {'slide'}
                         onrequestClose = {()=>this.closeModal2()}
                         transparent = {true}>
-                         <View style ={{flex: 1, backgroundColor:'rgb(233,231,217)', height: 730}}>
+                         <View style ={{backgroundColor:'rgb(233,231,217)', height: 730}}>
                             <Image  style={{width: 340, height: 197, alignSelf: 'center', marginTop: 100, padding:10}} source={require('../assets/tavi.png')} />
                             <Text style = {{fontSize: 7, marginTop: 20,marginRight: 10, textAlign: 'right'}}>
                             2017 AHA/ACC Focused Update of the 2014 AHA/ACC Guideline
@@ -450,10 +498,11 @@ class AstreatScreen extends React.Component{
 
                     <Card containerStyle={{display: display5, marginTop: 40, marginBottom: 20}}>
                             <Text　style={{marginBottom: 2}}>Vmax:        最高血流速度</Text>
-                            <Text　style={{marginBottom: 2}}>ΔPmean:   平均圧較差</Text>
                             <Text　style={{marginBottom: 2}}>EF:             左室駆出率</Text>
+                            <Text　style={{marginBottom: 2}}>Dd:   </Text>
+                            <Text　style={{marginBottom: 2}}>Ds:   </Text>
                             <Text　style={{marginBottom: 2}}>AVA:          大動脈弁口面積 </Text>
-                            <Text　style={{marginBottom: 2, marginBottom: 24}}>AVR:          外科的/経カテーテル的 大動脈弁置換術</Text>
+                            <Text　style={{marginBottom: 2, marginBottom: 24}}>AVR:          外科的大動脈弁置換術</Text>
                             <Text　style={{marginBottom: 2}}>運動負荷試験: トレッドミル運動負荷試験</Text>
                             <View style = {{backgroundColor: 'rgb(207, 226,212)', padding: 6}}>
                                 <Text　style={{marginBottom: 1, fontWeight: 'bold',fontSize: 10, color: 'rgb(204,0,10)'}}>有症候性のsevereASに対し、検査は禁忌</Text>
@@ -482,4 +531,4 @@ const styles = StyleSheet.create({
  
     
 
-export default AstreatScreen;
+export default ArtreatScreen;

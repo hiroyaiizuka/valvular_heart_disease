@@ -7,16 +7,25 @@ import EchoScreen from './EchoScreen';
 import GuidelineScreen from './GuidelineScreen';
 import Severe1Screen from './as/Severe1Screen';
 import AstreatScreen from './as/AstreatScreen';
+import Severe2Screen from './ar/Severe2Screen';
+import ArtreatScreen from './ar/ArtreatScreen';
 
 
 
 
 const App = createStackNavigator({
-  Astreat:        {screen: AstreatScreen},
+
+  Artreat:        {screen: ArtreatScreen},
   Home:           {screen: HomeScreen}, 
   Echo:           {screen: EchoScreen},
   Guideline:      {screen: GuidelineScreen},
   Severe1:        {screen: Severe1Screen},
+  Severe2:        {screen: Severe2Screen},
+  Astreat:        {screen: AstreatScreen},
+ 
+
+
+  
 
 
 

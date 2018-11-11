@@ -20,7 +20,7 @@ class HomeScreen extends React.Component{
                         <Text style={{color: 'rgb(52,62,62)', paddingTop: 20, textAlign: 'center'}}>大動脈弁狭窄症{"\n"}   (Aortic Stenosis; AS)</Text>
                     </TouchableOpacity>
             
-                    <TouchableOpacity style = {{paddingBottom: 25}} onPress = {() =>{ this.props.navigation.navigate('SevereN')}}>
+                    <TouchableOpacity style = {{paddingBottom: 25}} onPress = {() =>{ this.props.navigation.navigate('Severe2')}}>
                         <Text style={{color: 'rgb(52,62,62)', textAlign: 'center'}}>大動脈弁閉鎖不全症{"\n"}   (Aortic Regurgitation; AR)</Text>
                     </TouchableOpacity>
 
