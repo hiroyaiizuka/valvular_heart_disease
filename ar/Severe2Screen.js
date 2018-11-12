@@ -50,16 +50,18 @@ class Severe2Screen extends React.Component{
         return(
             
         <ScrollView style={styles.container}>
-           <Card title = '心エコーによる重症度評価' containerStyle={{marginBottom: 20}}>
-                <Text style={{marginBottom: 20, marginTop:3, fontSize: 12}}>弁通過血流速度から算出される </Text>
-                <Text>・最大/平均 左室-大動脈圧較差</Text>
-                <Text　style={{marginBottom: 20, marginTop: 4}}>・連続の式で求められる弁口面積</Text>
-                <Text　style={{marginBottom: 16, fontSize: 12}}>によって評価される。</Text>
-                <Text style={{marginBottom: 2, fontSize: 12}}>左室-大動脈圧較差は、手軽に求められるが</Text>
-                <Text style={{marginBottom: 3, fontSize: 12}}>血行動態の影響を受けるという欠点がある．</Text>
+           <Card title = '心エコーにおける重症度評価' containerStyle={{marginBottom: 20}}>
+                <Text style={{marginBottom: 2, marginTop:3, fontSize: 12}}>ARジェットの到達度は、見た目にもわかりやすく </Text>
+                <Text style={{marginBottom: 30, fontSize: 12}}>長らく重症度評価に使用されてきたが</Text>
+                <Text style={{marginBottom: 2,  fontSize: 12}}>大動脈の拡張期圧と左室拡張末期圧の圧較差に</Text>
+                <Text style={{marginBottom: 30, fontSize: 12}}>強く依存するため、推奨されなくなっている</Text>
+                <Text style={{marginBottom: 2, fontSize: 12}}>カラードプラー、パルスドプラー、連続波ドプラー</Text>
+                <Text style={{marginBottom: 3, fontSize: 12}}>で得られる各指標を元に、総合的な評価を行う</Text>
+                <Text style = {{fontSize: 7, marginTop: 30, left: 10}}>2017 ASE, Recommendations for Noninvasive Evaluation of
+Native Valvular Regurgitation</Text>
            </Card>
 
-           <Card title = '大動脈狭窄症の重症度基準' containerStyle={{marginBottom: 40, paddingBottom: 25}}>
+           <Card title = '大動脈弁閉鎖不全症の重症度基準' containerStyle={{marginBottom: 40, paddingBottom: 25}}>
            <View style={styles.container}>
         <Table style={{flexDirection: 'row'}}>
           {/* Left Wrapper */}
@@ -76,7 +78,7 @@ class Severe2Screen extends React.Component{
             <Cols data={state.tableData} heightArr={[40, 30, 30, 30, 30, 30, 30, 30]} textStyle={styles.text2}/>
           </TableWrapper>
         </Table>
-        <Text style={{fontSize: 6, paddingBottom: 10,position: 'absolute', top:275, right:-12}}>{"\n"}  先天性心疾患、心臓大血管の構造的疾患に対するカテーテル治療のガイドライン </Text>  
+        <Text style={{fontSize: 7, paddingBottom: 10,position: 'absolute', top:275, right:-12}}>{"\n"}  先天性心疾患、心臓大血管の構造的疾患に対するカテーテル治療のガイドライン </Text>  
       </View>
      
            
@@ -103,18 +105,18 @@ class Severe2Screen extends React.Component{
                
             </Swiper>
 
-             <Card title = '左室拡大' containerStyle={{marginTop: 60, paddingBottom: 25}}>
-             <Text style={{marginBottom: 24, marginTop:6, fontSize: 12}}>AVA ≦ 1.0cm2 にもかかわらず、心拍出量の低下により大動脈弁を通過する血流が減少し、Vmax ＜ 4m/s、ΔPmean ＜40mmHg と計測されるAS</Text>
-                <Text　style={{marginBottom: 4}}>・EF低下</Text>
-                <Text　style = {{marginBottom:4, borderWidth: 1, fontSize: 12}}>   虚血や心筋症などが原因</Text>
-                <Text　style={{marginBottom: 20, fontSize: 12}}>   → ドブタミン負荷心エコー で 重症 AS か確認</Text>
-                <Text　style={{marginBottom: 4}}>・EF>50% </Text>
-                <Text style={{borderWidth:1, marginBottom: 4, fontSize: 12}}>   左室狭小化や、拡張能低下が原因</Text>
-                <Text style={{marginBottom: 20, fontSize: 12}}>    → SVi (1回拍出量係数 : SV/体表面積) を計測 </Text>
-                <Text style={{fontSize: 12}}>✔︎  SVi > 35ml/m2   →    moderate AS</Text>
-                <Text style={{marginBottom: 6, fontSize: 12}}>✔︎  SVi ≦ 35ml/m2　→   ドブタミン負荷心エコー</Text>
-              
-           </Card>
+            <Card title = '左室拡大' containerStyle={{marginTop: 60, paddingBottom: 25}}>
+                <Text style={{marginBottom: 4, marginTop:6, fontSize: 12}}>ARは、代償反応が働いているうちは無症状であるが</Text>
+                <Text style={{marginBottom: 4,  fontSize: 12}}>徐々に左室心筋が繊維化し、リモデリングが進む</Text>
+                <Text style={{marginBottom: 4,  fontSize: 12}}>症状が出現する頃にはすでに、心筋障害がかなり進ん</Text>
+                <Text style={{marginBottom: 30,  fontSize: 12}}>でいることが多い</Text>
+                <Text　style={{marginBottom: 4,  fontSize: 12}}>無症候性severe ARでは</Text>
+                <Text style={{marginBottom: 4,  fontSize: 24, fontWeight: 'bold'}}>Dd > 70mm、 Ds > 50mm </Text>
+                <Text style={{marginBottom: 30,  fontSize: 12}}>を満たすと予後が悪く、外科的介入が望まれる</Text>
+                <Text　style={{marginBottom: 0,  fontSize: 12}}>AR:    大動脈弁閉鎖不全症</Text>
+                <Text　style={{marginBottom: 20,  fontSize: 12}}>Dd:    左室拡張末期径             Ds:     左室収縮末期径</Text>
+                <Text style={{fontSize: 7, textAlign: 'right'}}>2017 ESC/EACTS Guidelines for the management of valvular heart disease</Text>  
+            </Card>
        
           </ScrollView>
         )

@@ -14,14 +14,13 @@ import ArtreatScreen from './ar/ArtreatScreen';
 
 
 const App = createStackNavigator({
-
-  Artreat:        {screen: ArtreatScreen},
   Home:           {screen: HomeScreen}, 
   Echo:           {screen: EchoScreen},
   Guideline:      {screen: GuidelineScreen},
   Severe1:        {screen: Severe1Screen},
   Severe2:        {screen: Severe2Screen},
   Astreat:        {screen: AstreatScreen},
+  Artreat:        {screen: ArtreatScreen},
  
 
 

@@ -246,7 +246,7 @@ class AstreatScreen extends React.Component{
             <ScrollView  style = {{paddingTop: 100,  backgroundColor: 'rgb(233,231,217)'}} 
                     ref = {(scroller) => {this.scroller = scroller}}>
 
-                    <View style = {{position: 'absolute', top: -60, right:135 }}>
+                    <View style = {{position: 'absolute', top: -60, alignSelf: 'center'}}>
                         <TouchableOpacity  onPress ={()=> this.openModal()} >
                            <View style = {[{backgroundColor: 'rgb(130,200,143)'}, styles.button]}>
                             <Text style = {{color: 'white', fontSize: 12, padding:5}}>フローチャート版</Text>
@@ -259,7 +259,7 @@ class AstreatScreen extends React.Component{
                             onrequestClose = {()=>this.closeModal()}
                             transparent = {true}
                            >
-                            <View style ={{flex: 1, backgroundColor:'rgb(233,231,217)', height: 730}}>
+                            <View style ={{flex: 1, backgroundColor:'rgb(233,231,217)', height: 740}}>
                                 <Image  style={{width: 325, height: 490, alignSelf: 'center', marginTop: 100}} source={require('../assets/chartasnew.png')} />
                                 <Text style = {{fontSize: 7, marginTop: 40, textAlign: 'center'}}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease</Text>
             
@@ -427,10 +427,10 @@ class AstreatScreen extends React.Component{
                             <Card title = '外来フォロー 総論' containerStyle={{marginTop: 60, marginBottom: 20}}>
                                 <Text　style={{marginBottom: 25, marginTop: 20, fontSize: 12}}>ASの進行を、正確に予測することは不可能である。故に、定期的な診察及び、エコーフォローが必要である。 </Text>
                                 <Text　style={{marginBottom: 4, fontSize: 16, fontWeight: 'bold'}}>Vmax:　 3.0-3.9m/s </Text>
-                                <Text　style={{marginBottom: 2, fontSize: 10}}>1年で平均、Vmax 0.3m/s、ΔPmean 7mmHg 増加し</Text>
-                                <Text　style={{marginBottom: 24, fontSize: 10}}>AVA 0.1cm2 減少する</Text>
+                                <Text　style={{marginBottom: 2, fontSize: 12}}>1年で平均、Vmax 0.3m/s、ΔPmean 7mmHg 増加し</Text>
+                                <Text　style={{marginBottom: 24, fontSize: 12}}>AVA 0.1cm2 減少する</Text>
                                 <Text　style={{marginBottom: 4, fontSize: 16, fontWeight: 'bold'}}>Vmax 　≧ 4m/s </Text>
-                                <Text　style={{marginBottom: 2, fontSize: 10}}>2年間イベントフリーである確率は、30-50% である</Text>
+                                <Text　style={{marginBottom: 2, fontSize: 12}}>2年間イベントフリーである確率は、30-50% である</Text>
                                 <Text style = {{fontSize: 7, marginTop: 20, textAlign: 'center'}}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease</Text>
                             </Card>
                             <Card title = '外来フォロー 各論' containerStyle={{marginTop: 25, marginBottom: 20}}>

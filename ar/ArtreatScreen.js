@@ -8,7 +8,6 @@ class ArtreatScreen extends React.Component{
         display: "none",
         display2: "none",
         display3: "none",
-        display4: "none",
         display5: "none",
         displayope: "none",
         displayope2: "none",
@@ -17,17 +16,12 @@ class ArtreatScreen extends React.Component{
         textdisplay2: "none",
         textdisplay3: "none",
         textdisplay4: "none",
-        carddisplay: "none",
-        carddisplay2: "none",
-        carddisplay3: "none",
         index: 3,
         index1: 3,  
         index2: 3,  
-        index3: 3,
         index4: 3,
         index5: 3,
         modalVisible: false,
-        modalVisible2: false,
         modalVisible3: false,
     }
 
@@ -48,7 +42,6 @@ class ArtreatScreen extends React.Component{
                 display: "flex",
                 display2: "none",
                 display3: "none",
-                display4: "none",
                 displayope: "none",
                 displayope2: "none",
                 color: "white",
@@ -57,9 +50,6 @@ class ArtreatScreen extends React.Component{
                 textdisplay2: "none",
                 textdisplay3: "none",
                 textdisplay4: 'none',
-                carddisplay: "none",
-                carddisplay2: "none",
-                carddisplay3: "none",
                 index1: 4
 
 
@@ -69,16 +59,12 @@ class ArtreatScreen extends React.Component{
                 display: "none",
                 display2: "none",
                 display3: "none",
-                display4: "none",
                 displayope: "flex",
                 displayope2: "none",
                 textdisplay0: "none",
                 textdisplay2: "none",
                 textdisplay3: "none",
                 textdisplay4: "none",
-                carddisplay: "none",
-                carddisplay2: "none",
-                carddisplay3: "none",
                 color: "white",
                 index: index,
                 index1: 2,
@@ -101,9 +87,6 @@ class ArtreatScreen extends React.Component{
                     textdisplay4: 'none',
                     display3: "none",
                     displayope2: "none",
-                    carddisplay: "none",
-                    carddisplay2: "none",
-                    carddisplay3: "none",
                 });
             
             }else{
@@ -111,9 +94,6 @@ class ArtreatScreen extends React.Component{
                     displayope2: "flex",
                     textdisplay0: "none",
                     textdisplay4: 'none',
-                    carddisplay: "none",
-                    carddisplay2: "none",
-                    carddisplay3: "none",
                     color: "white",
                     index1: index1,
                     index5: 2
@@ -137,9 +117,6 @@ class ArtreatScreen extends React.Component{
                         textdisplay2: "none",
                         textdisplay3: "flex",
                         textdisplay4: "none",
-                        carddisplay: "none",
-                        carddisplay2: "none",
-                        carddisplay3: "none",
                         color: "white",
                         index2: index2
                      });
@@ -148,41 +125,10 @@ class ArtreatScreen extends React.Component{
                         textdisplay2: "none",
                         textdisplay3: "none",
                         textdisplay4: "flex",
-                        carddisplay: "none",
-                        carddisplay2: "none",
-                        carddisplay3: "none",
                         color: "white",
                         index2: index2
                     });
                 }        
-      }
-
-      pressHere4(index3){
-        this.scroller.scrollTo({x: 0, y: 480 })
-            if (index3 === 0){
-                this.setState({
-                    textdisplay0: "none",
-                    textdisplay2: "flex",
-                    textdisplay3: "none",
-                    carddisplay: "none",
-                    carddisplay2: "flex",
-                    carddisplay3: "none",
-                    color: "white",
-                    index3: index3
-                });
-            }else{
-                this.setState({
-                    textdisplay0: "none",
-                    textdisplay2: "flex",
-                    textdisplay3: "none",
-                    carddisplay: "flex",
-                    carddisplay2: "none",
-                    carddisplay3: "none",
-                    color: "white",
-                    index3: index3
-                 });
-            
-            }        
       }
 
       pressHere5(index4){
@@ -233,10 +179,6 @@ class ArtreatScreen extends React.Component{
         this.setState({modalVisible: true});
       }
 
-      openModal2(){
-        this.setState({modalVisible2: true});
-      }
-
       openModal3(){
         this.setState({modalVisible3: true});
       }
@@ -244,10 +186,6 @@ class ArtreatScreen extends React.Component{
       closeModal(){
         this.setState({modalVisible: false});
     　}
-
-      closeModal2(){
-        this.setState({modalVisible2: false});
-      }
 
       closeModal3(){
           this.setState({modalVisible3: false});
@@ -263,13 +201,13 @@ class ArtreatScreen extends React.Component{
     render(){
         let screenWidth = Dimensions.get('window').width;
         let screenHeight = Dimensions.get('window').height;
-        const {index, index1, index2, index3, index4, index5, textdisplay0, display, display2, display3, display4, display5, displayope, displayope2, modalVisible, modalVisible2, modalVisible3,
-            carddisplay, carddisplay2, carddisplay3, textdisplay2, textdisplay3, textdisplay4} = this.state;
+        const {index, index1, index2, index4, index5, textdisplay0, display, display2, display3, display5, displayope, displayope2, modalVisible, modalVisible3,
+              textdisplay2, textdisplay3, textdisplay4} = this.state;
         return(
             <ScrollView  style = {{paddingTop: 100,  backgroundColor: 'rgb(233,231,217)'}} 
                     ref = {(scroller) => {this.scroller = scroller}}>
 
-                    <View style = {{position: 'absolute', top: -60, right:135 }}>
+                    <View style = {{position: 'absolute', top: -60, alignSelf: 'center'}}>
                         <TouchableOpacity  onPress ={()=> this.openModal()} >
                            <View style = {[{backgroundColor: 'rgb(130,200,143)'}, styles.button]}>
                             <Text style = {{color: 'white', fontSize: 12, padding:5}}>フローチャート版</Text>
@@ -282,9 +220,9 @@ class ArtreatScreen extends React.Component{
                             onrequestClose = {()=>this.closeModal()}
                             transparent = {true}
                            >
-                            <View style ={{backgroundColor:'rgb(233,231,217)', height: 730}}>
+                            <View style ={{backgroundColor:'rgb(233,231,217)', height: 738}}>
                                 <Image  style={{width: 335, height: 590, alignSelf: 'center', marginTop: 60}} source={require('../assets/archart.png')} />
-                                <Text style = {{fontSize: 7, marginTop: 15, textAlign: 'center'}}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease</Text>
+                                <Text style = {{fontSize: 7, marginTop: 15, left: 54}}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease</Text>
             
                             <TouchableOpacity style = {[{marginTop: 15,backgroundColor: 'rgb(130,200,143)',alignSelf: 'center', width: 80}, styles.button]}
                                         onPress ={()=> this.closeModal()} >
@@ -323,15 +261,6 @@ class ArtreatScreen extends React.Component{
                         containerStyle={{height: 50, marginTop: 80, display: display}} 
                         />
 
-                    <ButtonGroup
-                        selectedButtonStyle={{backgroundColor: 'rgb(24,77,116)'}} 
-                        onPress={(index3)=> this.pressHere4(index3)}
-                        textStyle = {{fontSize: 16}}
-                        selectedIndex={index3}
-                        selectedTextStyle= {{color: 'white'}}
-                        buttons={['EF < 50%', 'EF ≧ 50%']}
-                        containerStyle={{height: 50, marginTop: 80, display: display4}} 
-                        />
 
                    
 
@@ -379,38 +308,6 @@ class ArtreatScreen extends React.Component{
                         containerStyle={{height: 50, marginTop: 40, display: display3}} 
                         />
 
-
-
-                    
-                    <Card title = '下記3条件を満たす場合' containerStyle={{display: carddisplay, marginTop: 80, marginBottom: 20}}>
-                        <Text　style={{marginBottom: 2, marginTop: 14}}>・AVA ≦ 1cm2  (indexed AVA ≦ 0.6cm2/m2)</Text>
-                        <Text　style={{marginBottom: 2, marginTop: 4}}>・SVi ≦ 35 ml/m2</Text>
-                        <Text　style={{marginBottom: 34}}>・症状あり: 心不全、(前)失神、胸痛、労作時呼吸苦</Text>
-                        <Text　style={{marginBottom: 24, fontSize:13, fontWeight: 'bold'}}>■ 心エコーは、収縮期血圧≦140mmHg  で施行する</Text>
-                        <Text　style={{marginBottom: 2, fontSize: 10}}>AVA: 大動脈弁口面積   indexed AVA: 大動脈弁口面積係数</Text>
-                        <Text　style={{marginBottom: 4, fontSize: 10}}>SVi: 1回拍出量係数</Text>
-                    </Card>
-
-                    <Card title = '下記2条件を満たす場合' containerStyle={{display: carddisplay2, marginTop: 80, marginBottom: 20}}>
-                        <Text　style={{marginBottom: 20}}>ドブタミン負荷心エコーの結果</Text>
-                        <Text　style={{marginBottom: 2, marginTop: 4}}>・AVA ≦ 1cm2 </Text>
-                        <Text　style={{marginBottom: 24, marginTop: 4}}>・Vmax ≧ 4m/s</Text>
-                        <Text　style={{marginBottom: 2, fontSize: 10}}>AVA: 大動脈弁口面積  　　Vmax: 最高血流速度 </Text>
-
-                    </Card>
-
-
-                    <Card title = '他の心臓手術と同時施行の場合' containerStyle={{display: carddisplay3, marginTop: 80, marginBottom: 20}}>
-                        <Text　style={{marginBottom: 2}}>石灰化が原因のmoderate ASは、進行すると</Text>
-                        <Text　style={{marginBottom: 24}}>5年以内に症状がでる可能性がある</Text>
-
-                    
-                        <Text　style={{marginBottom: 2}}>5年以内に心臓再手術を要する可能性を考慮し、</Text>
-                        <Text　style={{marginBottom: 6}}>個々の症例に応じ、手術を検討する</Text>
-                    </Card>
-            
-
-                       
         
                     <View style = {[{display: textdisplay0, alignSelf: 'center',  backgroundColor: 'rgb(197,65,43)',  height: 50, width:'60%', marginTop: 60}, styles.button ]}>                  
                             <Text style = {styles.textstyle}>AVR  class 1 </Text>
@@ -433,59 +330,29 @@ class ArtreatScreen extends React.Component{
                                 containerStyle = {{ position:'relative', top: -30, left: 70 }}/>       
                         </TouchableOpacity>
                     </View>
-                    
-                    
-
-                              
-                    <Modal
-                        visible = {modalVisible2}
-                        animationTipe = {'slide'}
-                        onrequestClose = {()=>this.closeModal2()}
-                        transparent = {true}>
-                         <View style ={{backgroundColor:'rgb(233,231,217)', height: 730}}>
-                            <Image  style={{width: 340, height: 197, alignSelf: 'center', marginTop: 100, padding:10}} source={require('../assets/tavi.png')} />
-                            <Text style = {{fontSize: 7, marginTop: 20,marginRight: 10, textAlign: 'right'}}>
-                            2017 AHA/ACC Focused Update of the 2014 AHA/ACC Guideline
-                            </Text>
-                            <Card title = '2017年のガイドライン改訂' containerStyle={{marginTop: 40, marginBottom: 20}}>
-                            
-                                <Text　style={{marginBottom: 24, marginTop: 4}}>手術リスクが中等度の症例に対し、TAVIがclass 2a となった。</Text>
-                                <Text　style={{marginBottom: 24, marginTop: 4}}>国内のガイドラインでは、手術禁忌もしくは高リスクの患者のみに対し、TAVIの適応とされているが、今後その適応が拡大されると予想される。　</Text>
-                                <Text　style={{marginBottom: 2, fontSize: 10}}>SAVR: 外科的大動脈弁置換術  　　TAVI: 経カテーテル的大動脈弁置換術 </Text>
-
-                                 <Text　style={{marginBottom: 2, marginTop: 4, fontSize: 9}}>先天性心疾患、心臓大血管の構造的疾患に対するカテーテル治療のガイドライン2014</Text>
-
-                            </Card>
-                            <TouchableOpacity style = {[{marginTop: 30,backgroundColor: 'rgb(130,200,143)',alignSelf: 'center', width: 80}, styles.button]}
-                                    onPress ={()=> this.closeModal2()} >
-                                <View >
-                                    <Text style = {{color: 'white', fontSize: 12, padding:5, alignSelf: 'center'}}>閉じる</Text>
-                                </View>
-                            </TouchableOpacity>
-                        </View>
-                    </Modal>
 
                      <Modal
                         visible = {modalVisible3}
                         animationTipe = {'slide'}
                         onrequestClose = {()=>this.closeModal3()}
                         transparent = {true}>
-                         <View style ={{backgroundColor:'rgb(233,231,217)', height: 730,}}>
+                         <View style ={{backgroundColor:'rgb(233,231,217)', height: 738,}}>
   
                             <Card title = '外来フォロー 総論' containerStyle={{marginTop: 60, marginBottom: 20}}>
-                                <Text　style={{marginBottom: 25, marginTop: 20, fontSize: 12}}>ASの進行を、正確に予測することは不可能である。故に、定期的な診察及び、エコーフォローが必要である。 </Text>
-                                <Text　style={{marginBottom: 4, fontSize: 16, fontWeight: 'bold'}}>Vmax:　 3.0-3.9m/s </Text>
-                                <Text　style={{marginBottom: 2, fontSize: 10}}>1年で平均、Vmax 0.3m/s、ΔPmean 7mmHg 増加し</Text>
-                                <Text　style={{marginBottom: 24, fontSize: 10}}>AVA 0.1cm2 減少する</Text>
-                                <Text　style={{marginBottom: 4, fontSize: 16, fontWeight: 'bold'}}>Vmax 　≧ 4m/s </Text>
-                                <Text　style={{marginBottom: 2, fontSize: 10}}>2年間イベントフリーである確率は、30-50% である</Text>
+                                <Text　style={{marginBottom: 25, marginTop: 20, fontSize: 12}}>BNPの上昇は、左室機能低下と関係するため、計測することが望ましい</Text>
+                                <Text　style={{marginBottom: 2, fontSize: 12}}>弁置換術後も、大動脈拡大は進行するので</Text>
+                                <Text　style={{marginBottom: 24, fontSize: 12}}>術前に、上行大動脈置換の適応を考慮する必要がある</Text>
+                                <Text　style={{marginBottom: 2, fontSize: 12}}>もし、上行大動脈が40mm以上に拡大した時は{"\n"}CTもしくはMRIで評価する</Text>
                                 <Text style = {{fontSize: 7, marginTop: 20, textAlign: 'center'}}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease</Text>
                             </Card>
                             <Card title = '外来フォロー 各論' containerStyle={{marginTop: 25, marginBottom: 20}}>
-                                <Text　style={{marginBottom: 24, marginTop: 30 }}>Vmax        ≧ 4.0 m/s  →    6-12ヵ月毎に心エコー  </Text>
-                                <Text　style={{marginBottom: 24, }}>Vmax:　   3-3.9 m/s  →　1-2年毎に心エコー　</Text>
-                                <Text　>Vmax:　   2-2.9 m/s  →　3-5年毎に心エコー </Text>
-                                <Text style = {{fontSize: 7, marginTop: 30, textAlign: 'center'}}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease</Text>
+                                <Text　style={{marginBottom: 2, fontSize: 12}}>mild - moderate AR 　　→　2年毎         に心エコー </Text>
+                                <Text　style={{marginBottom: 24, marginTop: 30, fontSize: 12 }}>severe AR (手術適応なし)→   最低1年毎   に心エコー</Text>
+                                <Text　style={{marginBottom: 2, fontSize: 12}}>左室のサイズや、EFに大きな変化があった場合</Text>
+                                <Text　style={{marginBottom: 16, fontSize: 12}}>または、手術適応の閾値に、計測値が近い時　</Text>
+                                <Text　style={{marginBottom: 2,fontSize: 12}}>　　　　　　　　　　　    →　3-6ヶ月毎  に心エコー</Text>
+                              
+                                <Text style = {{fontSize: 7, marginTop: 30, left:47 }}>2017 ESC/EACTS Guidelines for the management of valvular heart disease</Text>
                             </Card>
                             <TouchableOpacity style = {[{marginTop: 10,backgroundColor: 'rgb(130,200,143)',alignSelf: 'center', width: 80}, styles.button]}
                                     onPress ={()=> this.closeModal3()} >
@@ -497,18 +364,10 @@ class ArtreatScreen extends React.Component{
                     </Modal>
 
                     <Card containerStyle={{display: display5, marginTop: 40, marginBottom: 20}}>
-                            <Text　style={{marginBottom: 2}}>Vmax:        最高血流速度</Text>
-                            <Text　style={{marginBottom: 2}}>EF:             左室駆出率</Text>
-                            <Text　style={{marginBottom: 2}}>Dd:   </Text>
-                            <Text　style={{marginBottom: 2}}>Ds:   </Text>
-                            <Text　style={{marginBottom: 2}}>AVA:          大動脈弁口面積 </Text>
-                            <Text　style={{marginBottom: 2, marginBottom: 24}}>AVR:          外科的大動脈弁置換術</Text>
-                            <Text　style={{marginBottom: 2}}>運動負荷試験: トレッドミル運動負荷試験</Text>
-                            <View style = {{backgroundColor: 'rgb(207, 226,212)', padding: 6}}>
-                                <Text　style={{marginBottom: 1, fontWeight: 'bold',fontSize: 10, color: 'rgb(204,0,10)'}}>有症候性のsevereASに対し、検査は禁忌</Text>
-                                <Text　style={{marginBottom: 1, fontSize: 10, color: 'rgb(44,82,60)'}}>無症候性のsevere ASに対し、症状、運動耐用能</Text>
-                                <Text　style={{marginBottom: 2, fontSize: 10, color: 'rgb(44,82,60)'}}>血圧変化、不整脈の出現を評価する</Text>
-                            </View>
+                            <Text　style={{marginBottom: 4}}>EF:             左室駆出率</Text>
+                            <Text　style={{marginBottom: 4}}>Dd:            左室拡張末期径</Text>
+                            <Text　style={{marginBottom: 4}}>Ds:             左室収縮末期径</Text>
+                            <Text　style={{marginBottom: 4, marginBottom: 4}}>AVR:          外科的大動脈弁置換術</Text>
                     </Card>         
             </ScrollView>
         );
