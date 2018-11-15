@@ -9,19 +9,23 @@ import Severe1Screen from './as/Severe1Screen';
 import AstreatScreen from './as/AstreatScreen';
 import Severe2Screen from './ar/Severe2Screen';
 import ArtreatScreen from './ar/ArtreatScreen';
+import Severe3Screen from './mr/Severe3Screen';
+import MrtreatScreen from './mr/MrtreatScreen';
 
 
 
 
 const App = createStackNavigator({
+
   Home:           {screen: HomeScreen}, 
   Echo:           {screen: EchoScreen},
   Guideline:      {screen: GuidelineScreen},
   Severe1:        {screen: Severe1Screen},
   Severe2:        {screen: Severe2Screen},
+  Severe3:        {screen: Severe3Screen},
   Astreat:        {screen: AstreatScreen},
   Artreat:        {screen: ArtreatScreen},
- 
+  Mrtreat:        {screen: MrtreatScreen},
 
 
   

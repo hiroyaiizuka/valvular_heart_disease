@@ -33,6 +33,10 @@ const list2 = [
     {
         name: 'ESC/EACTS Guidelines for the management of valvular heart disease',
         subtitle: '2017年 European Heart Journal'
+    },
+    {
+        name: 'Recommendations for Noninvasive Evaluation of Native Valvular Regurgitation',
+        subtitle: '2017年 American Society of Echocardiography'
     }
 ]
 
@@ -55,10 +59,12 @@ class GuidelineScreen extends React.Component{
     onPress2(name){
         if (name === 'AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease'){
             Linking.openURL('http://www.onlinejacc.org/content/accj/63/22/e57.full.pdf')
+        }else if (name === 'Focused Update of the 2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease'){
+            Linking.openURL('https://secardiologia.es/images/grupos-trabajo/valvulopatias/documentos/2017-AHA-ACC-Focused-Update-VHD.pdf')
         }else if (name === 'ESC/EACTS Guidelines for the management of valvular heart disease'){
             Linking.openURL('https://academic.oup.com/eurheartj/article/38/36/2739/4095039')
-        }else {
-            Linking.openURL('https://secardiologia.es/images/grupos-trabajo/valvulopatias/documentos/2017-AHA-ACC-Focused-Update-VHD.pdf')
+        }else{
+            Linking.openURL('http://asecho.org/wordpress/wp-content/uploads/2017/04/2017VavularRegurgitationGuideline.pdf')
         }       
     }
 
@@ -68,8 +74,8 @@ class GuidelineScreen extends React.Component{
         const state = this.state;
 
         return(
-          <ScrollView >
-           <Text style={{fontSize: 25 ,padding: 20}} >国内</Text>
+          <ScrollView>
+           <Text style={{fontSize: 25 ,padding: 20, paddingTop: 40}} >国内</Text>
             <List>
                 {list.map((item) => (
                     <ListItem

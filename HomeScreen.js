@@ -33,7 +33,7 @@ class HomeScreen extends React.Component{
                         <Text style = {{textAlign: 'center'}}>僧帽弁狭窄症{"\n"}  (Mitral Stenosis; MS)</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style = {{paddingBottom: 10}} onPress = {() =>{ this.props.navigation.navigate('Different')}}>
+                    <TouchableOpacity style = {{paddingBottom: 10}} onPress = {() =>{ this.props.navigation.navigate('Severe3')}}>
                         <Text style = {{textAlign: 'center'}}>僧帽弁閉鎖不全症{"\n"}(Mitral Regurgitation; MR)</Text>
                     </TouchableOpacity>
 

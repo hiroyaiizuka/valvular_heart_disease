@@ -220,7 +220,7 @@ class ArtreatScreen extends React.Component{
                             onrequestClose = {()=>this.closeModal()}
                             transparent = {true}
                            >
-                            <View style ={{backgroundColor:'rgb(233,231,217)', height: 738}}>
+                            <ScrollView style ={{backgroundColor:'rgb(233,231,217)', height: 738}}>
                                 <Image  style={{width: 335, height: 590, alignSelf: 'center', marginTop: 60}} source={require('../assets/archart.png')} />
                                 <Text style = {{fontSize: 7, marginTop: 15, left: 54}}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease</Text>
             
@@ -230,7 +230,7 @@ class ArtreatScreen extends React.Component{
                                     <Text style = {{color: 'white', fontSize: 12, padding:5, alignSelf: 'center'}}>閉じる</Text>
                                 </View>
                             </TouchableOpacity>
-                            </View>
+                            </ScrollView>
                         </Modal>
                     </View>
                     <View style = {{position: 'absolute', top: -60, right:10 }}>
@@ -257,7 +257,7 @@ class ArtreatScreen extends React.Component{
                         textStyle = {{fontSize: 16}}
                         selectedIndex={index1}
                         selectedTextStyle= {{color: 'white'}}
-                        buttons={['症候性', '無症候性']}
+                        buttons={['有症候性', '無症候性']}
                         containerStyle={{height: 50, marginTop: 80, display: display}} 
                         />
 
@@ -336,7 +336,7 @@ class ArtreatScreen extends React.Component{
                         animationTipe = {'slide'}
                         onrequestClose = {()=>this.closeModal3()}
                         transparent = {true}>
-                         <View style ={{backgroundColor:'rgb(233,231,217)', height: 738,}}>
+                         <ScrollView style ={{backgroundColor:'rgb(233,231,217)', height: 738,}}>
   
                             <Card title = '外来フォロー 総論' containerStyle={{marginTop: 60, marginBottom: 20}}>
                                 <Text　style={{marginBottom: 25, marginTop: 20, fontSize: 12}}>BNPの上昇は、左室機能低下と関係するため、計測することが望ましい</Text>
@@ -360,7 +360,7 @@ class ArtreatScreen extends React.Component{
                                     <Text style = {{color: 'white', fontSize: 12, padding:5, alignSelf: 'center'}}>閉じる</Text>
                                 </View>
                             </TouchableOpacity>
-                        </View>
+                        </ScrollView>
                     </Modal>
 
                     <Card containerStyle={{display: display5, marginTop: 40, marginBottom: 20}}>

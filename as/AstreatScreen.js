@@ -259,7 +259,7 @@ class AstreatScreen extends React.Component{
                             onrequestClose = {()=>this.closeModal()}
                             transparent = {true}
                            >
-                            <View style ={{flex: 1, backgroundColor:'rgb(233,231,217)', height: 740}}>
+                            <ScrollView style ={{flex: 1, backgroundColor:'rgb(233,231,217)', height: 740}}>
                                 <Image  style={{width: 325, height: 490, alignSelf: 'center', marginTop: 100}} source={require('../assets/chartasnew.png')} />
                                 <Text style = {{fontSize: 7, marginTop: 40, textAlign: 'center'}}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease</Text>
             
@@ -269,7 +269,7 @@ class AstreatScreen extends React.Component{
                                     <Text style = {{color: 'white', fontSize: 12, padding:5, alignSelf: 'center'}}>閉じる</Text>
                                 </View>
                             </TouchableOpacity>
-                            </View>
+                            </ScrollView>
                         </Modal>
                     </View>
                     <View style = {{position: 'absolute', top: -60, right:10 }}>
@@ -296,7 +296,7 @@ class AstreatScreen extends React.Component{
                         textStyle = {{fontSize: 16}}
                         selectedIndex={index1}
                         selectedTextStyle= {{color: 'white'}}
-                        buttons={['症候性', '無症候性']}
+                        buttons={['有症候性', '無症候性']}
                         containerStyle={{height: 50, marginTop: 80, display: display}} 
                         />
 
@@ -394,7 +394,7 @@ class AstreatScreen extends React.Component{
                         animationTipe = {'slide'}
                         onrequestClose = {()=>this.closeModal2()}
                         transparent = {true}>
-                         <View style ={{flex: 1, backgroundColor:'rgb(233,231,217)', height: 730}}>
+                         <ScrollView style ={{flex: 1, backgroundColor:'rgb(233,231,217)', height: 730}}>
                             <Image  style={{width: 340, height: 197, alignSelf: 'center', marginTop: 100, padding:10}} source={require('../assets/tavi.png')} />
                             <Text style = {{fontSize: 7, marginTop: 20,marginRight: 10, textAlign: 'right'}}>
                             2017 AHA/ACC Focused Update of the 2014 AHA/ACC Guideline
@@ -414,7 +414,7 @@ class AstreatScreen extends React.Component{
                                     <Text style = {{color: 'white', fontSize: 12, padding:5, alignSelf: 'center'}}>閉じる</Text>
                                 </View>
                             </TouchableOpacity>
-                        </View>
+                        </ScrollView>
                     </Modal>
 
                      <Modal
@@ -422,7 +422,7 @@ class AstreatScreen extends React.Component{
                         animationTipe = {'slide'}
                         onrequestClose = {()=>this.closeModal3()}
                         transparent = {true}>
-                         <View style ={{backgroundColor:'rgb(233,231,217)', height: 730,}}>
+                         <ScrollView style ={{backgroundColor:'rgb(233,231,217)', height: 730,}}>
   
                             <Card title = '外来フォロー 総論' containerStyle={{marginTop: 60, marginBottom: 20}}>
                                 <Text　style={{marginBottom: 25, marginTop: 20, fontSize: 12}}>ASの進行を、正確に予測することは不可能である。故に、定期的な診察及び、エコーフォローが必要である。 </Text>
@@ -445,7 +445,7 @@ class AstreatScreen extends React.Component{
                                     <Text style = {{color: 'white', fontSize: 12, padding:5, alignSelf: 'center'}}>閉じる</Text>
                                 </View>
                             </TouchableOpacity>
-                        </View>
+                        </ScrollView>
                     </Modal>
 
                     <Card containerStyle={{display: display5, marginTop: 40, marginBottom: 20}}>
