@@ -330,7 +330,7 @@ class MrtreatScreen extends React.Component{
         const {index0, index, index1, index2, index4, index5, index6, index7, textdisplay0, display0, display, display2, display3, display5, displayope, displayope2, displayope3, displayope4,
                modalVisible, modalVisible3, textdisplay2, textdisplay2new, textdisplay3, textdisplay4, carddisplay} = this.state;
         return(
-            <ScrollView  style = {{paddingTop: 100,  backgroundColor: 'rgb(233,231,217)'}} 
+            <ScrollView  style = {{paddingTop: 100, backgroundColor: 'rgb(233,231,217)'}} 
                     ref = {(scroller) => {this.scroller = scroller}}>
 
                     <View style = {{position: 'absolute', top: -60, alignSelf: 'center'}}>
@@ -346,7 +346,7 @@ class MrtreatScreen extends React.Component{
                             onrequestClose = {()=>this.closeModal()}
                             transparent = {true}
                            >
-                            <ScrollView style ={{backgroundColor:'rgb(233,231,217)', height: 1000, marginBottom: 100}}>
+                            <ScrollView style ={{backgroundColor:'rgb(233,231,217)', height: 1200, marginBottom: 80}}>
                                 <Image  style={{width: 345, height: 800, alignSelf: 'center', marginTop: 60}} source={require('../assets/mrchart.png')} />
                                 <Text style = {{fontSize: 6, marginTop: 15, left: 30}}>Focused Update of the 2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease</Text>
             
@@ -505,7 +505,7 @@ class MrtreatScreen extends React.Component{
                     </View>
                   
                     <View style = {[{display: textdisplay2, alignSelf: 'center', backgroundColor: 'rgb(50,185,236)',  height: 50, width:'60%', marginTop: 60}, styles.button]}>
-                        <Text style = {styles.textstyle}>MV surgery   class 2a </Text>
+                        <Text style = {styles.textstyle}>MV Surgery   class 2a </Text>
                     </View>
 
                     <View style = {[{display: textdisplay2new, alignSelf: 'center', backgroundColor: 'rgb(50,185,236)',  height: 50, width:'60%', marginTop: 60}, styles.button]}>
@@ -513,7 +513,7 @@ class MrtreatScreen extends React.Component{
                     </View>
                         
                     <View style = {[{display: textdisplay3, alignSelf: 'center', backgroundColor: 'rgb(233,152,85)',  height: 50, width:'60%', marginTop: 60}, styles.button]}>
-                        <Text style = {styles.textstyle}>MV surgery   class 2b </Text>
+                        <Text style = {styles.textstyle}>MV Surgery   class 2b </Text>
                     </View>  
                    
                     <View style = {[{display: textdisplay4, marginTop: 60, width:'60%', height: 50, alignSelf: 'center', backgroundColor: 'rgb(130,200,143)'}, styles.button]}>
@@ -540,14 +540,14 @@ class MrtreatScreen extends React.Component{
                                 <Text　style={{marginBottom: 20, fontSize: 12}}>医師や患者が気づかぬうちに進行し、重症化しうる</Text>
                                 <Text　style={{marginBottom: 2, fontSize: 12}}>したがって、定期的に、MRの重症度、心機能、心拡大を</Text>
                                 <Text　style={{marginBottom: 2, fontSize: 12}}>評価することが重要である</Text>
-                                <Text style = {{fontSize: 7, marginTop: 20, textAlign: 'center'}}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease</Text>
+                                <Text style = {{fontSize: 7, marginTop: 36, left: 15}}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease</Text>
                             </Card>
-                            <Card title = '外来フォロー 各論' containerStyle={{marginTop: 25, marginBottom: 20}}>
-                                <Text　style={{marginBottom: 2, fontSize: 12}}>mild MR  →　                                 3-5年毎  に心エコー </Text>
-                                <Text　style={{marginBottom: 24, marginTop: 24, fontSize: 12 }}>moderate MR (無症状)   →             1-2年毎   に心エコー</Text>
-                                <Text　style={{marginBottom: 2, fontSize: 12}}>severe MR (無症状、EF>60%) →    6ヶ月毎 に心エコー </Text>                             
-                                <Text style = {{fontSize: 7, marginTop: 30, left:80 }}>ESC/EACTS Guidelines for the management of valvular heart disease </Text>
-                                <Text style = {{fontSize: 7, left:20 }}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease  </Text>
+                            <Card title = '心エコーフォロー ' containerStyle={{marginTop: 25, marginBottom: 20}}>
+                                <Text　style={{marginBottom: 2, fontSize: 12}}>mild MR  →　                                         3-5年毎 </Text>
+                                <Text　style={{marginBottom: 24, marginTop: 24, fontSize: 12 }}>moderate MR (無症状)   →                      1-2年毎</Text>
+                                <Text　style={{marginBottom: 2, fontSize: 12}}>severe MR (無症状、EF>60%) →            6ヶ月毎</Text>                             
+                                <Text style = {{fontSize: 7, marginTop: 30, left:74 }}>ESC/EACTS Guidelines for the management of valvular heart disease </Text>
+                                <Text style = {{fontSize: 7, left:15 }}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease  </Text>
                             </Card>
                             <TouchableOpacity style = {[{marginTop: 10,backgroundColor: 'rgb(130,200,143)',alignSelf: 'center', width: 80}, styles.button]}
                                     onPress ={()=> this.closeModal3()} >
@@ -558,17 +558,28 @@ class MrtreatScreen extends React.Component{
                         </ScrollView>
                     </Modal>
 
-                    <Card containerStyle={{display: display5, marginTop: 40, marginBottom: 20}}>
+                    <Card containerStyle={{display: display5, marginTop: 60, marginBottom: 20}}>
                             <Text　style={{marginBottom: 4}}>MR:                 僧帽弁閉鎖不全症 </Text>
                             <Text　style={{marginBottom: 4}}>EF:                  左室駆出率</Text>
-                            <Text　style={{marginBottom: 4}}>MV Surgery:  僧帽弁置換術</Text>
+                            <Text　style={{marginBottom: 6}}>MV Surgery:  僧帽弁形成術 or 僧帽弁置換術{"\n"}                       (可能であれば、形成術が望ましい)</Text>
                             <Text　style={{marginBottom: 4}}>MV Repair:     僧帽弁形成術</Text>
                             <Text　style={{marginBottom: 4}}>Ds:                  左室収縮末期径</Text>
                             <Text　style={{marginBottom: 4}}>NYHAⅢ:         安静時は無症状、高度な活動制限あり</Text>
                             <Text　style={{marginBottom: 4}}>NYHAⅣ:        いかなる身体活動も制限される</Text>
-      
-
-                    </Card>         
+                            <Text　style={{marginBottom: 4}}>MitraClip:       経皮的僧帽弁接合不全修復術</Text>
+                    </Card>       
+                    <Card title = 'MitraClipについて' containerStyle={{display: display5, marginTop: 40, marginBottom: 100}}> 
+                        <Text　style={{marginBottom: 2,  fontSize: 16, fontWeight: 'bold'}}>概要:</Text>
+                        <Text　style={{marginBottom: 20, marginTop: 4, fontSize: 12}}>MitraClipは、外科的治療が困難な重度の僧帽弁閉鎖不全症の患者のための、低侵襲な経皮的僧帽弁接合不全修復システムである。これまで全世界で6万人以上の患者が治療を受けており、2018年4月に保険償還が得られた事で、日本で治療が可能となった。 </Text>
+                        <Text　style={{marginBottom: 2, marginTop: 4,  fontSize: 16, fontWeight: 'bold'}}>適応:</Text>
+                        <Text　style={{marginBottom: 20, marginTop: 4, fontSize: 12}}>外科手術は、MitraClipより治療成績が良好(残存MRが少ない、耐久性が良い)なため、適応は下記の様に限定される。{"\n"}手術リスクが高い、もしくは困難症例に対して、MRの改善により症状が改善することが期待される、EF 30%以上の症例。</Text>
+                        <Text　style={{marginBottom: 2, marginTop: 4,  fontSize: 16, fontWeight: 'bold'}}>治療成績:</Text>
+                        <Text　style={{marginBottom: 20, marginTop: 4, fontSize: 12}}>2次性MR の生命予後は左室心筋障害の程度とされ、最大限の内科治療後の外科手術が、予後を改善したというエビデンスはない。これは、心機能が低下した手術リスクが高い症例が多く、積極的な治療介入が難しかったからである。しかし、MitraClip 治療により、症状、運動耐容能、QOLを改善させることがわかってきた。</Text>
+                        <Text　style={{marginBottom: 20, marginTop: 4, fontSize: 12}}>2018年9月、無作為比較試験(COAPT試験)によって、低心機能2次性MR症例に対し、薬物治療群 vs 薬物治療 + MitraClip群 の治療成績の結果が発表された。1次エンドポイントである24ヶ月間の心不全入院イベント、全死亡共に、MitraClip群で有意に良好な結果であった。</Text>
+                        <Text　style={{marginBottom: 20, marginTop: 4, fontSize: 12}}>薬物治療抵抗性の2次性MRに対するMitraClipは、本邦における心不全治療の有効な選択肢となることが、予想される。</Text>
+                        <Text　style={{marginBottom: 2, marginTop: 4, fontSize: 6, left: 50}}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease</Text>
+                        <Text　style={{marginBottom: 2, marginTop: 4, fontSize: 6, left: 82}}>2018 NEJM Transcatheter Mitral-Valve Repair in Patients with Heart Failure</Text>
+                    </Card>  
             </ScrollView>
         );
     }

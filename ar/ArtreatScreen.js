@@ -339,20 +339,22 @@ class ArtreatScreen extends React.Component{
                          <ScrollView style ={{backgroundColor:'rgb(233,231,217)', height: 738,}}>
   
                             <Card title = '外来フォロー 総論' containerStyle={{marginTop: 60, marginBottom: 20}}>
-                                <Text　style={{marginBottom: 25, marginTop: 20, fontSize: 12}}>BNPの上昇は、左室機能低下と関係するため、計測することが望ましい</Text>
+                                <Text　style={{marginBottom: 2, marginTop: 20, fontSize: 12}}>BNPの上昇は、左室機能低下と関係するため</Text>
+                                <Text　style={{marginBottom: 25, fontSize: 12}}>計測することが望ましい</Text>
                                 <Text　style={{marginBottom: 2, fontSize: 12}}>弁置換術後も、大動脈拡大は進行するので</Text>
                                 <Text　style={{marginBottom: 24, fontSize: 12}}>術前に、上行大動脈置換の適応を考慮する必要がある</Text>
-                                <Text　style={{marginBottom: 2, fontSize: 12}}>もし、上行大動脈が40mm以上に拡大した時は{"\n"}CTもしくはMRIで評価する</Text>
-                                <Text style = {{fontSize: 7, marginTop: 20, textAlign: 'center'}}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease</Text>
+                                <Text　style={{marginBottom: 2, fontSize: 12}}>もし、上行大動脈が40mm以上に拡大した時は</Text>
+                                <Text　style={{marginBottom: 2, fontSize: 12}}>CTもしくはMRIで評価する</Text>
+                                <Text style = {{fontSize: 7, marginTop: 34, left:15}}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease</Text>
                             </Card>
-                            <Card title = '外来フォロー 各論' containerStyle={{marginTop: 25, marginBottom: 20}}>
-                                <Text　style={{marginBottom: 2, fontSize: 12}}>mild - moderate AR 　　→　2年毎         に心エコー </Text>
-                                <Text　style={{marginBottom: 24, marginTop: 30, fontSize: 12 }}>severe AR (手術適応なし)→   最低1年毎   に心エコー</Text>
+                            <Card title = '心エコーフォロー' containerStyle={{marginTop: 25, marginBottom: 20}}>
+                                <Text　style={{marginBottom: 2, fontSize: 12}}>mild - moderate AR 　　→　　　　　　　　　2年毎 </Text>
+                                <Text　style={{marginBottom: 24, marginTop: 30, fontSize: 12 }}>severe AR (手術適応なし)→  　　　　　　  1年以内毎</Text>
                                 <Text　style={{marginBottom: 2, fontSize: 12}}>左室のサイズや、EFに大きな変化があった場合</Text>
-                                <Text　style={{marginBottom: 16, fontSize: 12}}>または、手術適応の閾値に、計測値が近い時　</Text>
-                                <Text　style={{marginBottom: 2,fontSize: 12}}>　　　　　　　　　　　    →　3-6ヶ月毎  に心エコー</Text>
+                                <Text　style={{marginBottom: 10, fontSize: 12}}>または、手術適応の閾値に、計測値が近い時　</Text>
+                                <Text　style={{marginBottom: 2,fontSize: 12}}>　　　　　　　　　　　    →　　　　　　　3-6ヶ月毎</Text>
                               
-                                <Text style = {{fontSize: 7, marginTop: 30, left:47 }}>2017 ESC/EACTS Guidelines for the management of valvular heart disease</Text>
+                                <Text style = {{fontSize: 7, marginTop: 30, left:58 }}>2017 ESC/EACTS Guidelines for the management of valvular heart disease</Text>
                             </Card>
                             <TouchableOpacity style = {[{marginTop: 10,backgroundColor: 'rgb(130,200,143)',alignSelf: 'center', width: 80}, styles.button]}
                                     onPress ={()=> this.closeModal3()} >

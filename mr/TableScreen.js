@@ -5,11 +5,10 @@ import {Table, TableWrapper,Cell,  Col, Cols } from 'react-native-table-componen
 
 class TableScreen extends React.Component{    
     state = {
-        tableTitle: ['逸脱','退行性変化', '感染', '先天性',
+        tableTitle: ['粘液変性','退行性変化', '感染', '炎症性', '先天性',
         '虚血性', '心筋症', '弁輪拡大' ],
         tableData: [
-          ['軽度', '< 0.3','< 25','>500','拡張早期', '<30', '<30', '<0.1'],
-          ['中等度', '0.3 - 0.6','25 - 64','200 - 500','拡張早期', '30 - 59', '30 - 49', '0.1 - 0.29'],
+          ['原因', '逸脱、腱索断裂/過伸展 ','石灰化、肥厚','感染性心内膜炎','リウマチ、膠原病、血管炎、放射線、薬剤', 'クレフト、パラシュートMV', '', '', '心房細動、拘束型心筋症'],
         ]
     }
     
@@ -23,14 +22,14 @@ class TableScreen extends React.Component{
             <TableWrapper style={{width: 100}}>
                 <Cell data="" style={styles.singleHead}/>
                 <TableWrapper style={{flexDirection: 'row'}}>
-                <Col data={['一次性', '二次性']} style={styles.head} heightArr={[120, 90]} textStyle={styles.text} />
-                <Col data={state.tableTitle} style={styles.title} heightArr={[30, 30,30,30,30, 30, 30]} textStyle={styles.titleText}></Col>
+                <Col data={['一次性', '二次性']} style={styles.head} heightArr={[120, 120]} textStyle={styles.text} />
+                <Col data={state.tableTitle} style={styles.title} heightArr={[30, 30,30,30,30, 30, 30, 30]} textStyle={styles.titleText}></Col>
                 </TableWrapper>
             </TableWrapper>
     
             {/* Right Wrapper */}
             <TableWrapper style={{flex:1}}>
-                <Cols data={state.tableData} heightArr={[40, 30, 30, 30, 30, 30, 30,30]} textStyle={styles.text2}/>
+                <Cols data={state.tableData} heightArr={[40, 30, 30, 30, 30, 30, 30,30, 30]} textStyle={styles.text2}/>
             </TableWrapper>
             </Table>
         )
@@ -43,7 +42,7 @@ const styles = StyleSheet.create({
   singleHead: { width: 100, height: 40, backgroundColor: '#c8e1ff' },
   head: { flex: 0.5, backgroundColor: '#c8e1ff' },
   title: { flex: 2, backgroundColor: '#f6f8fa' },
-  titleText: { marginRight: 6, textAlign:'right', fontSize: 9 },
+  titleText: { marginRight: 6, textAlign:'right', fontSize: 12 },
   text: { textAlign: 'center', fontSize: 11 },
   text2: { textAlign: 'center', fontSize: 10 },
   });

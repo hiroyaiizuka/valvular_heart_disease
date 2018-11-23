@@ -47,7 +47,6 @@ class Severe1Screen extends React.Component{
     
     render(){
         const state = this.state;
-
         return(
             
         <ScrollView style={styles.container}>

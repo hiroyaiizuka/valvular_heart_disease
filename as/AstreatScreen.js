@@ -237,6 +237,7 @@ class AstreatScreen extends React.Component{
       }
 
 
+
     render(){
         let screenWidth = Dimensions.get('window').width;
         let screenHeight = Dimensions.get('window').height;
@@ -341,11 +342,11 @@ class AstreatScreen extends React.Component{
 
                     <Card title = '他の心臓手術と同時施行の場合' containerStyle={{display: carddisplay3, marginTop: 80, marginBottom: 20}}>
                         <Text　style={{marginBottom: 2}}>石灰化が原因のmoderate ASは、進行すると</Text>
-                        <Text　style={{marginBottom: 24}}>5年以内に症状がでる可能性がある</Text>
+                        <Text　style={{marginBottom: 24}}>5年以内に有症状となる可能性がある</Text>
 
                     
-                        <Text　style={{marginBottom: 2}}>5年以内に心臓再手術を要する可能性を考慮し、</Text>
-                        <Text　style={{marginBottom: 6}}>個々の症例に応じ、手術を検討する</Text>
+                        <Text　style={{marginBottom: 2}}>その場合における、心臓再手術の可能性を配慮し</Text>
+                        <Text　style={{marginBottom: 6}}>個々の症例に応じて、手術を検討する</Text>
                     </Card>
             
 
@@ -425,19 +426,20 @@ class AstreatScreen extends React.Component{
                          <ScrollView style ={{backgroundColor:'rgb(233,231,217)', height: 730,}}>
   
                             <Card title = '外来フォロー 総論' containerStyle={{marginTop: 60, marginBottom: 20}}>
-                                <Text　style={{marginBottom: 25, marginTop: 20, fontSize: 12}}>ASの進行を、正確に予測することは不可能である。故に、定期的な診察及び、エコーフォローが必要である。 </Text>
-                                <Text　style={{marginBottom: 4, fontSize: 16, fontWeight: 'bold'}}>Vmax:　 3.0-3.9m/s </Text>
+                                <Text　style={{marginBottom: 2, marginTop: 20, fontSize: 12}}>ASの進行を、正確に予測することは不可能である。</Text>
+                                <Text　style={{marginBottom: 25, fontSize: 12}}>故に、定期的な診察及び、エコーフォローが必要である。</Text>
+                                <Text　style={{marginBottom: 4, fontSize: 14, fontWeight: 'bold', color: 'rgb(24,77,116)'}}>Vmax:　 3.0-3.9m/s </Text>
                                 <Text　style={{marginBottom: 2, fontSize: 12}}>1年で平均、Vmax 0.3m/s、ΔPmean 7mmHg 増加し</Text>
                                 <Text　style={{marginBottom: 24, fontSize: 12}}>AVA 0.1cm2 減少する</Text>
-                                <Text　style={{marginBottom: 4, fontSize: 16, fontWeight: 'bold'}}>Vmax 　≧ 4m/s </Text>
+                                <Text　style={{marginBottom: 4, fontSize: 14, fontWeight: 'bold', color: 'rgb(24,77,116)'}}>Vmax 　≧ 4m/s </Text>
                                 <Text　style={{marginBottom: 2, fontSize: 12}}>2年間イベントフリーである確率は、30-50% である</Text>
-                                <Text style = {{fontSize: 7, marginTop: 20, textAlign: 'center'}}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease</Text>
+                                <Text style = {{fontSize: 7, marginTop: 30, left:15}}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease</Text>
                             </Card>
-                            <Card title = '外来フォロー 各論' containerStyle={{marginTop: 25, marginBottom: 20}}>
-                                <Text　style={{marginBottom: 24, marginTop: 30 }}>Vmax        ≧ 4.0 m/s  →    6-12ヵ月毎に心エコー  </Text>
-                                <Text　style={{marginBottom: 24, }}>Vmax:　   3-3.9 m/s  →　1-2年毎に心エコー　</Text>
-                                <Text　>Vmax:　   2-2.9 m/s  →　3-5年毎に心エコー </Text>
-                                <Text style = {{fontSize: 7, marginTop: 30, textAlign: 'center'}}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease</Text>
+                            <Card title = '心エコーフォロー' containerStyle={{marginTop: 25, marginBottom: 20}}>
+                                <Text　style={{marginBottom: 16, marginTop: 30 }}>Vmax        ≧ 4.0 m/s  →                6-12ヵ月毎</Text>
+                                <Text　style={{marginBottom: 24, }}>Vmax:　   3-3.9 m/s  →　            1-2年毎</Text>
+                                <Text　>Vmax:　   2-2.9 m/s  →　            3-5年毎</Text>
+                                <Text style = {{fontSize: 7, marginTop: 36, left:15}}>2014 AHA/ACC Guideline for the Management of Patients With Valvular Heart Disease</Text>
                             </Card>
                             <TouchableOpacity style = {[{marginTop: 10,backgroundColor: 'rgb(130,200,143)',alignSelf: 'center', width: 80}, styles.button]}
                                     onPress ={()=> this.closeModal3()} >
@@ -456,7 +458,7 @@ class AstreatScreen extends React.Component{
                             <Text　style={{marginBottom: 2, marginBottom: 24}}>AVR:          外科的/経カテーテル的 大動脈弁置換術</Text>
                             <Text　style={{marginBottom: 2}}>運動負荷試験: トレッドミル運動負荷試験</Text>
                             <View style = {{backgroundColor: 'rgb(207, 226,212)', padding: 6}}>
-                                <Text　style={{marginBottom: 1, fontWeight: 'bold',fontSize: 10, color: 'rgb(204,0,10)'}}>有症候性のsevereASに対し、検査は禁忌</Text>
+                                <Text　style={{marginBottom: 1, fontWeight: 'bold',fontSize: 10, color: 'rgb(204,0,10)'}}>有症候性のsevere ASに対し、検査は禁忌</Text>
                                 <Text　style={{marginBottom: 1, fontSize: 10, color: 'rgb(44,82,60)'}}>無症候性のsevere ASに対し、症状、運動耐用能</Text>
                                 <Text　style={{marginBottom: 2, fontSize: 10, color: 'rgb(44,82,60)'}}>血圧変化、不整脈の出現を評価する</Text>
                             </View>

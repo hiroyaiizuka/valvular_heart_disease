@@ -9,12 +9,12 @@ const { width } = Dimensions.get('window')
 
 class Severe3Screen extends React.Component{    
     state = {
-        tableTitle: ['vena contracta 幅 (cm)','左室流出路逆流幅比 (%)', '圧半減時間 PHT(msec)', '下行大動脈の拡張期逆流波形',
-        '逆流量 (ml)', '逆流率 (%)', '有効逆流弁口面積 (cm2)' ],
+        tableTitle: ['vena contracta 幅 (cm)','カラードプラジェット面積 (%)', 
+        '逆流量 (ml)', '逆流率 (%)', '有効逆流弁口面積 (cm2)', '左房', '左室' ],
         tableData: [
-          ['軽度', '< 0.3','< 25','>500','拡張早期', '<30', '<30', '<0.1'],
-          ['中等度', '0.3 - 0.6','25 - 64','200 - 500','拡張早期', '30 - 59', '30 - 49', '0.1 - 0.29'],
-          ['重度', '> 0.6','> 65','< 200', '全拡張期', '≧ 60', '≧ 50', '≧ 0.3'],
+          ['軽度', '< 0.3','左房面積の\n20%未満', '<30', '<30', '<0.2', '', ''],
+          ['中等度', '0.3 - 0.7','','30 - 59', '30 - 49', '0.2 - 0.39', '', ''],
+          ['重度', '≧ 0.7','左房面積の\n40%以上','≧ 60', '≧ 50', '≧ 0.4', '拡大', '拡大'],
         ]
     }
     
@@ -52,7 +52,8 @@ class Severe3Screen extends React.Component{
             
         <ScrollView style={styles.container}>
            <Card title = '一次性MR  vs  二次性MR ' containerStyle={{marginBottom: 20}}>
-                <Text　style={{marginBottom: 2}}>弁尖の異常が原因かそうでないかで、MRは2分される</Text>
+                <Text　style={{marginTop: 4, marginBottom:2}}>一次性:  僧帽弁の形態的な異常</Text>
+                <Text　style={{marginBottom: 20}}>二次性:  左室、乳頭筋、弁輪、腱索の異常</Text>
                 <TableScreen/>
                 <Text style = {{fontSize: 7, marginTop: 30, left: 10}}>2017 ASE, Recommendations for Noninvasive Evaluation of
 Native Valvular Regurgitation</Text>
@@ -65,17 +66,17 @@ Native Valvular Regurgitation</Text>
           <TableWrapper style={{width: 100}}>
             <Cell data="" style={styles.singleHead}/>
             <TableWrapper style={{flexDirection: 'row'}}>
-              <Col data={['定性評価', '定量評価']} style={styles.head} heightArr={[120, 90]} textStyle={styles.text} />
-              <Col data={state.tableTitle} style={styles.title} heightArr={[30, 30,30,30,30, 30, 30]} textStyle={styles.titleText}></Col>
+              <Col data={['定性評価', '定量評価', 'その他']} style={styles.head} heightArr={[65, 90,60 ]} textStyle={styles.text} />
+              <Col data={state.tableTitle} style={styles.title} heightArr={[30, 35,30,30,30, 30, 30, 30, 30]} textStyle={styles.titleText}></Col>
             </TableWrapper>
           </TableWrapper>
  
           {/* Right Wrapper */}
           <TableWrapper style={{flex:1}}>
-            <Cols data={state.tableData} heightArr={[40, 30, 30, 30, 30, 30, 30, 30]} textStyle={styles.text2}/>
+            <Cols data={state.tableData} heightArr={[40, 30, 35, 30, 30, 30, 30, 30]} textStyle={styles.text2}/>
           </TableWrapper>
         </Table>
-        <Text style={{fontSize: 7, paddingBottom: 10,position: 'absolute', top:275, right:-12}}>{"\n"}  先天性心疾患、心臓大血管の構造的疾患に対するカテーテル治療のガイドライン </Text>  
+        <Text style={{fontSize: 7, paddingBottom: 10,position: 'absolute', top:275, right:-12}}>{"\n"}  弁膜疾患の非薬物療法に関するガイドライン </Text>  
       </View>
      
            
@@ -101,19 +102,6 @@ Native Valvular Regurgitation</Text>
                 </View>
                
             </Swiper>
-
-            <Card title = '左室拡大' containerStyle={{marginTop: 60, paddingBottom: 25}}>
-                <Text style={{marginBottom: 4, marginTop:6, fontSize: 12}}>ARは、代償反応が働いているうちは無症状であるが</Text>
-                <Text style={{marginBottom: 4,  fontSize: 12}}>徐々に左室心筋が繊維化し、リモデリングが進む</Text>
-                <Text style={{marginBottom: 4,  fontSize: 12}}>症状が出現する頃にはすでに、心筋障害がかなり進ん</Text>
-                <Text style={{marginBottom: 30,  fontSize: 12}}>でいることが多い</Text>
-                <Text　style={{marginBottom: 4,  fontSize: 12}}>無症候性severe ARでは</Text>
-                <Text style={{marginBottom: 4,  fontSize: 24, fontWeight: 'bold'}}>Dd > 70mm、 Ds > 50mm </Text>
-                <Text style={{marginBottom: 30,  fontSize: 12}}>を満たすと予後が悪く、外科的介入が望まれる</Text>
-                <Text　style={{marginBottom: 0,  fontSize: 12}}>AR:    大動脈弁閉鎖不全症</Text>
-                <Text　style={{marginBottom: 20,  fontSize: 12}}>Dd:    左室拡張末期径             Ds:     左室収縮末期径</Text>
-                <Text style={{fontSize: 7, textAlign: 'right'}}>2017 ESC/EACTS Guidelines for the management of valvular heart disease</Text>  
-            </Card>
        
           </ScrollView>
         )
