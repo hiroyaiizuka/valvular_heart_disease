@@ -13,12 +13,15 @@ import Severe3Screen from './mr/Severe3Screen';
 import MrtreatScreen from './mr/MrtreatScreen';
 import Severe4Screen from './ms/Severe4Screen';
 import MstreatScreen from './ms/MstreatScreen';
+import TrtreatScreen from './tr/TrtreatScreen';
+import Severe5Screen from './tr/Severe5Screen';
+
 
 
 
 
 const App = createStackNavigator({
-
+  Trtreat:        {screen: TrtreatScreen},
 
   Home:           {screen: HomeScreen}, 
   Echo:           {screen: EchoScreen},
@@ -32,6 +35,10 @@ const App = createStackNavigator({
   Mrtreat:        {screen: MrtreatScreen},
   Mstreat:        {screen: MstreatScreen},
   Severe4:        {screen: Severe4Screen},
+
+  Severe5:        {screen: Severe5Screen}
+
+
 
 
 

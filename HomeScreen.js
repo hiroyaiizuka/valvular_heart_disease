@@ -41,7 +41,7 @@ class HomeScreen extends React.Component{
                     <View style = {styles.soubou}>
                         <Text style = {styles.haienText}> 三尖弁 </Text>
                     </View>    
-                        <TouchableOpacity style = {{paddingBottom: 10}} onPress = {() =>{ this.props.navigation.navigate('Different')}}>
+                        <TouchableOpacity style = {{paddingBottom: 10}} onPress = {() =>{ this.props.navigation.navigate('Severe5')}}>
                         <Text style = {{textAlign: 'center'}}>三尖弁閉鎖不全症{"\n"}(Tricupid Regurgitation; TR)</Text>
                         </TouchableOpacity>
                    
